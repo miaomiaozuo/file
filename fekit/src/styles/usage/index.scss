@@ -1,0 +1,189 @@
+.container{
+	width:100%;
+	height:100%;
+	@include flexbox();
+	@include flex-direction(column);
+	.content{
+		@include flex;
+		width:100%;
+		height:100%;
+		overflow: hidden;
+	}
+	.footer{
+		height:44px;
+		ul{
+			width:100%;
+			height:100%;
+			@include flexbox();
+			position: relative;
+			li{
+				@include flex;
+				text-align: center;
+				border-top: 1px solid #ccc; 
+				b{
+					font-size:20px;
+					margin-top:-4px;
+					display:block;
+				}
+				span{
+					display:block;
+					margin-top:-4px;
+				}
+				&:nth-child(3){
+					b{
+						display: inline-block;
+						width:50px;
+						height:50px;
+						border:1px solid #ccc;
+						border-radius: 100%;
+						font-size:36px;
+						position: relative;
+						top:-8px;
+						line-height: 48px;
+						background: #fff;
+						z-index: 99;
+						
+					}
+				}
+				&.active{
+					color: #42a25b;
+				}
+			}
+		}
+	}
+}
+
+.guide{
+	width:100%;
+	height:100%;
+	@include flexbox();
+	img{
+		width:100%;
+		height:100%;
+	}
+}
+.other{
+	height:44px;
+	line-height: 44px;
+	@include flexbox();
+	text-align: center;
+	background: #0cc042;
+	color: #fff;
+	span{
+		width:44px;
+		line-height: 44px;
+		font-size: 18px;
+	}
+	div{
+		@include flex;
+	}
+		
+}
+.header{
+	width:100%;
+	height:44px;
+	@include flexbox();
+	background: #0cc042;
+	color: #fff;
+	text-align: center;
+	>span{
+		width:44px;
+		line-height: 44px;
+		font-size: 1.8rem;
+		color: #fff;
+	}
+	>div{
+		@include flex();
+		@include flexbox();
+		p{
+			margin:7px auto;
+			border-radius:15px;
+			overflow: hidden;
+			span{
+				line-height: 30px;
+				text-align: center;
+				float: left;
+				background:rgba(64,204,99,0.5);
+				height:30px;
+				width:6rem;
+			}
+			.active{
+				background:rgba(64,204,99,1);
+			}
+			
+		}
+	}
+	
+}
+.home{
+	width:100%;
+	height:100%;
+	@include flexbox();
+	@include flex-direction(column);
+	
+	.main{
+		@include flex;
+		@include flexbox();
+		@include flex-direction(column);
+		width:100%;
+		height:100%;
+		.nav{
+			width:100%;
+			height:44px;
+			text-align: center;
+			line-height: 44px;
+			ul{
+				width:100%;
+				height:100%;
+				@include flexbox();
+				li{
+					@include flex;
+					border-bottom:1px solid #ccc;
+					box-sizing:border-box;	
+					&.current{
+						border-bottom:2px solid #42a25b;
+						color: #42a25b;
+					}
+				}
+			}
+		}
+		.article{
+			@include flex;
+			padding-top:2px;
+			width:100%;
+			height:100%;
+			overflow:hidden;
+			padding-bottom:44px;
+			ul{
+				@include flexbox();
+				justify-content:space-between;
+				@include flex-wrap(wrap);
+
+				li{
+					width:49%;
+					img{
+						width:100%;
+						height:auto;
+					}
+					p{
+						line-height: 30px;
+						text-align: center;
+					}
+
+				}
+
+			}
+		}
+	}
+}
+.detail{
+	img{
+		width:100%;
+		height:auto;
+		
+	}
+	p{
+		text-align:center;
+		line-height:30px;
+	}
+}

@@ -1,0 +1,27 @@
+@import "./lib/core/reset.scss";
+@import "./usage/common/common.css";
+@import "./usage/common/swiper.css";
+@import "./usage/index.scss";
+
+html,body{
+	width:100%;
+	height:100%;
+	overflow: hidden;
+	@include flexbox;
+	@include flex-direction(column);
+	font-size: 62.5%;
+}
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+@media screen and (max-width:320px){
+    body{font-size: 14px}
+}
+@media screen and (min-width:321px) and (max-width:400px){
+    body{font-size: 16px}
+}
+@media screen and (min-width:401px){
+    body{font-size: 18px}
+} 

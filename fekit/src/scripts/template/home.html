@@ -1,0 +1,45 @@
+<div class="home">
+	<header class="header">
+		<span class="yo-ico">&#xe790;</span>
+		<div><p class="hot"><span class="active">热点</span><span>关注</span></p></div>
+		<span class="yo-ico">&#xe60c;</span>
+
+	</header>
+	
+	<div class="main swiper-container">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<nav class="nav">
+					<ul id="list">
+						<li class="current">足球现场</li>
+						<li>足球生活</li>
+						<li>足球美女</li>
+					</ul>
+				</nav>
+				<ion-scroll>
+					<div class="article swiper-container">
+						<div class="swiper-wrapper"> 
+							<div class="swiper-slide iscroll">
+								
+									<ul>
+										<li ng-repeat="item in arr" >
+											<img ng-click="detail(item.id)" ng-src="{{item.img}}" alt="">
+											<p>{{item.title}}</p>
+
+										</li>
+									</ul>
+								
+							</div>
+							<div class="swiper-slide">生活</div>
+							<div class="swiper-slide">美女</div>
+						</div>
+					</div>
+				</ion-scroll>
+			</div>
+			<div class="swiper-slide">关注</div>
+			
+		</div>
+				
+	</div>
+	
+</div>
